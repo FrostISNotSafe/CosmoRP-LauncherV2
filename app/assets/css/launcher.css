@@ -2694,10 +2694,10 @@ input:checked+.toggleSwitchSlider:before {
 
 #landingContainer>#lower>#left #content {
     position: relative;
-    top: 25px;
+    top: 100px;
     display: inline-flex;
-    line-height: 24px;
-    left: 50px;
+    line-height: 25px;
+    left: 80px;
 }
 
 #landingContainer>#lower>#center {
@@ -3088,6 +3088,7 @@ input:checked+.toggleSwitchSlider:before {
     height: 120px;
     width: auto;
     position: relative;
+    border-radius: 50%;
     z-index: 1;
 }
 
@@ -3099,16 +3100,16 @@ input:checked+.toggleSwitchSlider:before {
     border-radius: 50%;
     margin-top: 50px;
     display: flex;
-    animation: float 4s ease-in-out infinite;
+    /* animation: float 4s ease-in-out infinite; */
 }
 
 @keyframes float {
     0%, 100% {
-        transform: translateY(0);
+        /* transform: translateY(0); */
     }
 
     50% {
-        transform: translateY(-4px);
+        /* transform: translateY(-4px); */
     }
 }
 
@@ -3208,7 +3209,7 @@ input:checked+.toggleSwitchSlider:before {
     letter-spacing: 1px;
     text-shadow: 0px 0px 20px black;
     position: absolute;
-    bottom: -25px; /* Ajuste conforme necess�rio */
+    bottom: -25px; /* Ajuste conforme necessï¿½rio */
     left: 50%; /* Posiciona o texto centralizado horizontalmente */
     transform: translateX(-50%); /* Ajuste para centralizar o texto */
     -webkit-user-select: initial;
@@ -3417,7 +3418,7 @@ input:checked+.toggleSwitchSlider:before {
 /* Maintains maximum width on the status bar. */
 #server_status_wrapper {
     display: inline-flex;
-    width: 75px;
+    width: 90px;
 }
 
 /* Span which displays the player count of the selected server. */
@@ -3618,77 +3619,56 @@ input:checked+.toggleSwitchSlider:before {
 }
 
 /* The launch button. */
+
 #launch_button {
-    position: relative;
-    padding: 8px 25px;
-    border-radius: 7px;
-    border: 1px solid rgb(0, 255, 196);
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 2px;
-    background: transparent;
-    color: #fff;
-    overflow: hidden;
-    box-shadow: 0 0 0 0 transparent;
-    -webkit-transition: all 0.2s ease-in;
-    -moz-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
+    margin-top: 2.4rem;
+    font-size: 2.0rem; /* text-xl */
+    font-weight: bold; /* font-bold */
+    text-transform: uppercase; /* uppercase */
+    border: none;
+    background-color: #2c0035; /* bg-[#064fde] */
+    padding-top: 0.6rem; /* py-3 */
+    padding-bottom: 0.6rem; /* py-3 */
+    padding-left: 4.0rem; /* px-14 */
+    padding-right: 4.0rem; /* px-14 */
+    border-radius: 1rem; /* rounded-xl */
+    position: absolute; /* absolute */
+    top: -3rem; /* -top-12 */
+    left: 50%; /* left-1/2 */
+    transform: translateX(-50%); /* -translate-x-1/2 */
+    transition: all 0.2s; /* transition-all duration-200 */
+    font-family: 'THEBOLDFONT', sans-serif;
 }
-
-    #launch_button:hover {
-        background: rgb(0, 255, 196);
-        box-shadow: 0 0 13px 5px rgba(0, 142, 236, 0.815);
-        -webkit-transition: all 0.2s ease-out;
-        -moz-transition: all 0.2s ease-out;
-        transition: all 0.2s ease-out;
-    }
-
-        #launch_button:hover::before {
-            -webkit-animation: sh02 0.5s 0s linear;
-            -moz-animation: sh02 0.5s 0s linear;
-            animation: sh02 0.5s 0s linear;
-        }
-
-    #launch_button::before {
-        content: '';
-        display: block;
-        width: 0px;
-        height: 86%;
-        position: absolute;
-        top: 7%;
-        left: 0%;
-        opacity: 0;
-        background: #fff;
-        box-shadow: 0 0 50px 30px #fff;
-        -webkit-transform: skewX(-20deg);
-        -moz-transform: skewX(-20deg);
-        -ms-transform: skewX(-20deg);
-        -o-transform: skewX(-20deg);
-        transform: skewX(-20deg);
-    }
-
-@keyframes sh02 {
-    from {
-        opacity: 0;
-        left: 0%;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-        left: 100%;
-    }
+#launch_button:hover,
+#launch_button:focus {
+    box-shadow: 0 0 15px 0 #1e0024; /* hover:shadow-[0_0px_30px_0px_#064fde] */
 }
-
 #launch_button:active {
-    box-shadow: 0 0 0 0 transparent;
-    -webkit-transition: box-shadow 0.2s ease-in;
-    -moz-transition: box-shadow 0.2s ease-in;
-    transition: box-shadow 0.2s ease-in;
+    color: #c7c7c7;
+    text-shadow: 0px 0px 20px #c7c7c7, 0px 0px 20px #c7c7c7;
+}
+#launch_button:disabled {
+    color: #c7c7c7;
+    cursor: default;
+    pointer-events: none;
+    margin-top: 2.4rem;
+    font-size: 1.5rem; /* text-xl */
+    font-weight: bold; /* font-bold */
+    text-transform: uppercase; /* uppercase */
+    border: none;
+    background-color: #2c0035; /* bg-[#064fde] */
+    padding-top: 0.6rem; /* py-3 */
+    padding-bottom: 0.6rem; /* py-3 */
+    padding-left: 3.2rem; /* px-14 */
+    padding-right: 3.2rem; /* px-14 */
+    border-radius: 1rem; /* rounded-xl */
+    position: absolute; /* absolute */
+    top: -3rem; /* -top-12 */
+    left: 50%; /* left-1/2 */
+    transform: translateX(-50%); /* -translate-x-1/2 */
+    transition: all 0.2s; /* transition-all duration-200 */
+    font-family: 'THEBOLDFONT', sans-serif;
+    white-space: nowrap;
 }
 
 
